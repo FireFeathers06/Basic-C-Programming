@@ -21,7 +21,7 @@ Connect with other Hacktoberfest participants by using #hacktoberfest on your so
 New to DigitalOcean? Receive USD $50 in infrastructure credit at https://do.co/hacktoberfest50.
 
 # Events code of conduct
-Hacktoberfest events are welcoming, open, and inclusive. Include this line on your event page: "Please read our Events Code of Conduct before attending.
+Hacktoberfest events are welcoming, open, and inclusive. Include this line on your event page: "Please read our [Events Code of Conduct](https://do.co/hacktoberconduct) before attending.
 
 
 Happy Hacking! :heart:
