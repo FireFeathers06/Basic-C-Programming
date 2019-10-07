@@ -31,23 +31,23 @@ int main() {
 	for (int i = 1; i <= len; i++) {
 		for (int j = 1; j <= len; j++) { 
 			if (i <= len-i)
-	        	min1 = i-1;
-	        else
-	          min1 = len-i;
+				min1 = i-1;
+	        	else
+	          		min1 = len-i;
 	        
-	        if (j <= len-j)
-	        	min2 = j-1;
-	        else
-	        	min2 = len-j;
+	        	if (j <= len-j)
+	        		min2 = j-1;
+	        	else
+	        		min2 = len-j;
 	        
-	        if (min1 <= min2)
-	        	min = min1;
-	        else
-	        	min = min2;
+	        	if (min1 <= min2)
+	        		min = min1;
+	        	else
+	        		min = min2;
 
-	        printf("%d ", n-min);
-	    }
-	    printf("\n");
+	        	printf("%d ", n-min);
+	    	}
+		printf("\n");
 	}
 	return 0;
 }
