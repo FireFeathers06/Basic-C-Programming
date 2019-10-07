@@ -4,6 +4,7 @@
 
 -> You need 4 Pull requests on GitHub to complete [Hacktober Fest](https://hacktoberfest.digitalocean.com).
 
--> To Learn how to make Pull Requests head to the tutorial [here](https://github.com/firstcontributions/first-contributions).
+-> To Learn how to make Pull Requests head to the tutorial [here](https://github.com/firstcontributions/first-contributions/blob/master/github-desktop-tutorial.md).
+
 
 Happy Hacking! :heart:
