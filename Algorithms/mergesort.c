@@ -1,30 +1,27 @@
-/* C program for Merge Sort */
 #include<stdlib.h> 
 #include<stdio.h> 
   
-// Merges two subarrays of arr[]. 
-// First subarray is arr[l..m] 
-// Second subarray is arr[m+1..r] 
 void merge(int arr[], int l, int m, int r) 
 { 
     int i, j, k; 
     int n1 = m - l + 1; 
     int n2 =  r - m; 
+    //merges two subarrays of arr[], i.e. arr[l..m] and arr[m+1..r]
   
-    /* create temp arrays */
     int L[n1], R[n2]; 
-  
-    /* Copy data to temp arrays L[] and R[] */
+    //created twwo temp arrays  
+
     for (i = 0; i < n1; i++) 
         L[i] = arr[l + i]; 
     for (j = 0; j < n2; j++) 
         R[j] = arr[m + 1+ j]; 
+    //copies data to arrays
   
-    /* Merge the temp arrays back into arr[l..r]*/
-    i = 0; // Initial index of first subarray 
-    j = 0; // Initial index of second subarray 
-    k = l; // Initial index of merged subarray 
-    while (i < n1 && j < n2) 
+    i = 0; //first subarray 
+    j = 0; //econd subarray 
+    k = l; //merged subarray
+
+    while (i < n1 && j < n2)  // merges the temp arrays back to arr[l..r] 
     { 
         if (L[i] <= R[j]) 
         { 
@@ -39,18 +36,15 @@ void merge(int arr[], int l, int m, int r)
         k++; 
     } 
   
-    /* Copy the remaining elements of L[], if there 
-       are any */
-    while (i < n1) 
+
+    while (i < n1) //copies remaining elements of L[]
     { 
         arr[k] = L[i]; 
         i++; 
         k++; 
     } 
   
-    /* Copy the remaining elements of R[], if there 
-       are any */
-    while (j < n2) 
+    while (j < n2) //copies remaining elements of r[]
     { 
         arr[k] = R[j]; 
         j++; 
@@ -58,15 +52,13 @@ void merge(int arr[], int l, int m, int r)
     } 
 } 
   
-/* l is for left index and r is right index of the 
-   sub-array of arr to be sorted */
-void mergeSort(int arr[], int l, int r) 
+
+void mergeSort(int arr[], int l, int r) // L is left index and r is right index of sub array to be sorted
 { 
     if (l < r) 
     { 
-        // Same as (l+r)/2, but avoids overflow for 
-        // large l and h 
-        int m = l+(r-l)/2; 
+
+        int m = (l+r)/2; 
   
         // Sort first and second halves 
         mergeSort(arr, l, m); 
@@ -75,29 +67,27 @@ void mergeSort(int arr[], int l, int r)
         merge(arr, l, m, r); 
     } 
 } 
-  
-/* UTILITY FUNCTIONS */
-/* Function to print an array */
-void printArray(int A[], int size) 
-{ 
-    int i; 
-    for (i=0; i < size; i++) 
-        printf("%d ", A[i]); 
-    printf("\n"); 
-} 
-  
-/* Driver program to test above functions */
+
 int main() 
 { 
-    int arr[] = {12, 11, 13, 5, 6, 7}; 
-    int arr_size = sizeof(arr)/sizeof(arr[0]); 
+    //scanning array to sort
+    printf("Enter size of array to be sorted \n");
+    int arr_size;
+    scanf("%d", &arr_size);
+    int arr[arr_size];
+    printf("Enter array \n");
+    int i;
+    for(i=0;i<arr_size;i++) 
+        scanf("%d", &arr[i]);
   
-    printf("Given array is \n"); 
-    printArray(arr, arr_size); 
-  
+    //to sort array, we call function
     mergeSort(arr, 0, arr_size - 1); 
   
+    //printing final sorted array
     printf("\nSorted array is \n"); 
-    printArray(arr, arr_size); 
+    for (i=0; i < arr_size; i++) 
+        printf("%d ", arr[i]); 
+    printf("\n");
+
     return 0; 
 } 
