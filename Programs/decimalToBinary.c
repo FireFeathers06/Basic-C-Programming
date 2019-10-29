@@ -5,20 +5,25 @@ int main(){
     //Declared Variables
     int a[10],n,i;  
 
-    //Entering the number
+    //Scanning the number
     printf("Enter the number to convert: ");    
     scanf("%d",&n);    
     
-    for(i=0;n>0;i++){    
-        a[i]=n%2;    
-        n=n/2;    
-    } 
+    i=0;
+    while(n>0)
+    {
+	//Storing digits in array
+    	a[i]=n%2;
+	n/=2;
+	i++;
+    }
 
-    //Printing the Number
+    //Printing the number
     printf("\nBinary of Given Number is=");    
     for(i=i-1;i>=0;i--){    
         printf("%d",a[i]);    
     }  
-      
+    printf("\n");
+
 return 0;  
 }  
