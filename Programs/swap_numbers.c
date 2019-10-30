@@ -1,11 +1,19 @@
+/** Contributor : Vivek Bhardwaj
+ * swapping using X-OR
+ **/
+
 #include<stdio.h>  
+
+void swap(int *a,int *b){
+ *a^=*b;  
+ *b^=*a;
+ *a^=*b;
+}
  int main()    
 {    
 int a=10, b=20;      
 printf("a=%d b=%d",a,b);      
-a=a+b;//a=30 (10+20)    
-b=a-b;//b=10 (30-20)    
-a=a-b;//a=20 (30-10)    
+swap(&a,&b);  
 printf("\nAfter swapping  a=%d b=%d",a,b);    
 return 0;  
 }  
