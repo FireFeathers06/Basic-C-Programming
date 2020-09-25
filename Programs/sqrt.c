@@ -6,9 +6,11 @@ int main()
 	scanf("%d",&t);
 	while(t--)
 	{
+		
 		scanf("%d",&n);
 		ans=sqrt(n);
 		printf("%d\n",ans);
+		
 
 	}
 	return 0;
