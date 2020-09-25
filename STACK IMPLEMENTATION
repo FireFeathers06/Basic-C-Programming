@@ -1,0 +1,66 @@
+#include<stdio.h>
+int push(int a[],int top)
+{   char c;
+    
+   S: top++;
+    scanf("%d",&a[top]);
+    printf("Want to push more?(y/n):");fflush(stdin);
+    scanf("%c",&c);
+    if(c=='y')
+    goto S;
+    return top;
+
+}
+int pop(int a[],int top)
+{
+    printf("Element %d popped!",a[top]);
+    top=top-1;
+    return top;
+}
+
+void display(int a[],int top)
+{
+    for(int i=top;i>=0;i--)
+    printf("%d\n",a[i]);
+}
+
+void peek(int a[],int top)
+{
+    printf("%d\n",a[top]);
+}
+
+#define Max 10
+int main()
+{ 
+ int stack[Max],top=-1,ch;
+char c;
+
+A: printf("\tMenu \n 1 Push \n 2 Pop \n 3 Display  \n 4 Peek ");
+printf("\nEnter your choice: ");
+scanf("%d",&ch);
+
+
+    switch(ch)
+{ 
+    case 1:  
+            top= push(stack,top);
+          break;
+    case 2:
+            top=pop(stack,top);
+            break;
+    case 3:display(stack,top);
+            break;
+    case 4:peek(stack,top);
+            break;
+    default:
+            printf("Wrong input!");
+            break;
+}
+
+printf("\nMENU?(y/n): ");fflush(stdin);
+scanf("%c",&c);
+if(c=='y')
+goto A;
+
+return 0;
+}
