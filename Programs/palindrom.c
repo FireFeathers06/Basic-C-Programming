@@ -14,6 +14,7 @@ void isPalindrome(char str[])
 	} 
 	printf("%s is palindrome", str); 
 } 
+
 int main() 
 { 
 	char str[50];
