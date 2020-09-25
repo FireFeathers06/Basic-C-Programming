@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int n,temp;
+    scanf("%d",&n);
+    int *p;
+     p = (int*)malloc(n * sizeof(int));
+    for(int i=0;i<=n;i++)
+    {
+        scanf("%d",a[p+i]);
+    }
+
+
+    for(int i=0; i<(n-1); i++)
+	{
+		for(int j=0; j<(n-i-1); j++)
+		{
+			if(a[*(p+j)]>a[*(p+j+1)])
+			{
+				temp=a[*(p+j)];
+				a[*(p+j)]=a[*(p+j+1)];
+				a[*(p+j+1)]=temp;
+			}
+		}
+	}
+
+    for(int i=0;i<=n;i++)
+    {
+        printf("%d",a[p+i]);
+    }
+}
