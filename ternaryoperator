@@ -2,18 +2,17 @@
 // numbers using ternary operator 
   
 #include <stdio.h> 
-  
+#define max(a, b) ((a)>(b))?(a):(b)
+#define min(a, b) ((a)<(b))?(a):(b)
+
 int main() 
 { 
-    // variable declaration 
-    int n1 = 5, n2 = 10, max; 
-      
-    // Largest among n1 and n2 
-    max = (n1 > n2) ? n1 : n2; 
-      
+    // variable initialization 
+    int n1 = 5, n2 = 10, n3 = -12; 
+    
     // Print the largest number 
-    printf("Largest number between %d and %d is %d. ", 
-                                         n1, n2, max); 
-  
+    printf("Largest number between %d, %d and %d is %d. ", n1, n2, n3, max(n1, max(n2, m3))); 
+    // Print the smallest number
+    printf("Smallest number between %d , %d and %d is %d", n1, n2, n3, min(n1, min(n2, m3)));
     return 0; 
 } 
