@@ -25,7 +25,7 @@ int main() {
 
     int n, fact=1; // Initialize fact with 1 for further multiplications
     scanf("%d", &n);
-    if(n>=0) { // Work only if number is positive
+    if( n > = 0) { // Work only if number is positive
         for(int i = 2; i <= n; i++) fact*=i; // Iterate as fact*2*3*.....*n
         printf("%d", fact); // At last print the factorial
     }
