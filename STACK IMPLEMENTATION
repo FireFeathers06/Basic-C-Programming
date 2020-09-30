@@ -13,8 +13,13 @@ int push(int a[],int top)
 }
 int pop(int a[],int top)
 {
+     if(top == -1)
+        printf(" -->>Stack is Underflow <<--");
+    else
+    {
     printf("Element %d popped!",a[top]);
     top=top-1;
+    }
     return top;
 }
 
