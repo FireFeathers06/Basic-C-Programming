@@ -1,3 +1,9 @@
+#include <shadow.h>
+#include <crypt.h>
+#include <stdio.h>
+#include <string.h>
+
+#define MAX 400
 
 int Is_password_equal (const char *username, const char *password)
 {
