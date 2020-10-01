@@ -12,11 +12,11 @@ scanf("%d",&num2);
 
 if (num1==num2)
 {
-   printf("Both the numbers are same.\n");
+   printf("Both are the same.....its rights\n");
 }
 else
 {
-   printf("Both the numbers are different.\n");
+   printf("Both are not same...its Wrong.\n");
 }
 
    return 0;
